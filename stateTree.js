@@ -6,10 +6,13 @@ var tree = new Baobab({
   main: {
     colorBar: 'red'
   },
+
   pokedex: {
     pokemons: [],
-    isLoading: true
+    isLoading: true,
+    pokemonQuery: ''
   },
+
   pokemonInfo: {
     info: {},
     isLoading: true,

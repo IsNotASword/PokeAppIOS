@@ -45,7 +45,7 @@ var PokemonInfoStats = React.createClass({
         </View>
         <View style={styles.stat}>
           <Text style={styles.statTextLabel}>Weight: </Text>
-          <Text style={styles.statText}>{pokemonStats.weight / 10} k</Text>
+          <Text style={styles.statText}>{pokemonStats.weight / 10} kg</Text>
         </View>
       </View>
     );

@@ -13,8 +13,6 @@ var {
   StatusBarIOS
 } = React;
 
-StatusBarIOS.setStyle('light-content');
-
 var PokeApp = React.createClass({
   mixins: [mixin.branch],
 
@@ -23,13 +21,14 @@ var PokeApp = React.createClass({
   },
 
   render: function() {
+    StatusBarIOS.setStyle('light-content');
+
     return (
       <NavigatorIOS 
         style={styles.container}
         initialRoute={{
           title: 'All Pokemons',
-          component: Pokedex,
-          backButtonTitle: 'Pkmns'
+          component: Pokedex
         }}
         barTintColor={this.state.colorBar}
         tintColor={'white'}

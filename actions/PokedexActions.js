@@ -30,6 +30,7 @@ module.exports = {
       if (number < 10000) {
         sortedPokemons.push({
           name: _this._formatName(pokemon.name),
+          nameQuery: pokemon.name,
           resourceURI: pokemon.resource_uri,
           number: number
         });
@@ -48,5 +49,9 @@ module.exports = {
     var newName = name.split('-').join(' ');
 
     return newName.charAt(0).toUpperCase() + newName.slice(1);
+  },
+
+  _onChangePokemonQuery: function(query) {
+    pokedexCursor.set('pokemonQuery', query);
   }
 }
